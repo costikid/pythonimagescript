@@ -1,9 +1,11 @@
+# import the libraries
 from PIL import Image, ImageOps
 from os import listdir
 from os.path import splitext, basename
-
+#path of the folder where you want to save the images after they have been modified 
 folder = "./media/"
 path_list = listdir(f"./{folder}")
+# Making the images a square with a minimum size of 1000x1000 and filling in a white background if needed
 def make_square(im, min_size=1000, fill_color=(255,255,255, 0)):
     
     x, y = im.size
